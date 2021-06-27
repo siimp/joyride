@@ -3,7 +3,7 @@
 # Joyride (Joyor) QS-S4 protocol
 
 
-## Project aetup (linux)
+## Project Setup (linux)
 ```
 python3 -m venv venv
 source ./venv/bin/activate
@@ -11,10 +11,10 @@ pip3 install -r requirements.txt
 
 ```
 
-## Reverse engineering
+## Reverse engineering the throttle controller
 
 ```
-sudo ./venv/bin/python reverse_engineer.py
+sudo ./venv/bin/python reverse_engineering.py
 ```
 
 ## Running the utility

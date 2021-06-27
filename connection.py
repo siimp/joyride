@@ -11,7 +11,8 @@ log = logging.getLogger(__name__)
 
 def get_serial_connection():
     comports = list_ports.comports()
-    log.info(f'available comport devices: { list(map(lambda comport: comport.device, comports)) }')
+    log.info(
+        f'available comport devices: { list(map(lambda comport: comport.device, comports)) }')
 
     if len(comports) == 0:
         log.info('no comport device found')
@@ -21,4 +22,4 @@ def get_serial_connection():
     log.info(f'using com port device {device}')
 
     log.info(f'connecting to serial device using baud rate {BAUD_RATE}')
-    return Serial(device, BAUD_RATE, timeout = 1)
+    return Serial(device, BAUD_RATE, timeout=1)

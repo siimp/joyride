@@ -14,9 +14,11 @@ def read_all(serial):
     log.info(f'{response}')
 
 
+serial = None
 try:
     serial = get_serial_connection()
     read_all(serial)
 finally:
-    log.info('closing serial connection')
-    serial.close()
+    if serial:
+        log.info('closing serial connection')
+        serial.close()

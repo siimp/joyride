@@ -18,6 +18,7 @@ def parse_arguments():
     return vars(parser.parse_args())
 
 
+serial = None
 try:
     args = parse_arguments()
     serial = get_serial_connection()
